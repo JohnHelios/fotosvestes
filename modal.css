@@ -1,0 +1,59 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 20%;
+  top: 50%;
+  width: 60%;
+  height: 20%;
+  background-color:rgba(#31694d, 0.6);
+}
+.modal-content{
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 50%;
+        max-width: 1200px;
+    
+}
+.close {
+    color: black;
+    position: absolute;
+    top: 1%;
+    left:71%;
+    z-index: 1;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover{
+    color: #3b6950;
+    cursor: pointer;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    
+    padding: 10px;
+    color: #31694d;
+    font-weight: bold;
+    font-size: 20px;
+    background-color:rgba(0,0,0,0.7);
+    z-index: 1;
+  }
+  .prev:hover, .next:hover{
+    background-color:rgba(255,255,255,0.7);
+  }
+  .next{
+    left:70.5%;
+  }
+  .prev{
+      left:26%;
+  }
+
+  
+
+

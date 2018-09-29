@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ΦΩΤΟΣΒΕΣΤΕΣ</title><link rel="icon" type="image/ico" href="pictures/castle.png" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+  <script src="script.js"></script>
+</head>
+<body>
+	<div class="topnav">
+    <div class="logoimage">
+      <img src="pictures/castle.png" alt="logo" />
+      <h1>ΦΩΤΟΣΒΕΣΤΕΣ</h1>
+    </div> 
+    <div class="menou">
+      <a  class="active"  onclick="hometab()" >Αρχική </a>
+      <a  onclick="videotab()">Βίντεο </a>
+      <a  onclick="imagestab()">Εικόνες</a>
+      <a  onclick="contacttab()">Επικοινωνία</a>	
+      <a  onclick="abouttab()">Πληροφορίες</a>	
+    </div>
+  </div>
+  <div id="home"  >
+    <p><i>Hey! What took you so long?</i></p>
+  </div>
+  <div id="videos">
+      <h2>Παρακολουθήστε τα βίντεο της ομάδας μας!</h2>
+      <div class="container">
+            <div class='player'>
+                   <video id="myvideo" width="100%" height="100%" autoplay="true" controls="controls">
+                       <source src="" type='video/mp4'>
+                 </video>
+                 
+             
+            </div> 
+           <div class='videos'>	
+             <div class='firstvideo'>
+                  <button id='btn1' onClick='setvideo("videos/evelyn1.mp4")'>FAIL 1</button>
+             </div>
+            <div class='secondvideo'>
+                  <button id='btn2' onClick='setvideo("videos/evelyn2.mp4")'>FAIL 2</button> 
+ 
+             </div>
+             <div class='thirdvideo'>
+                  <button id='btn3' onClick='setvideo("videos/evelyn3.mp4")'>FAIL 3</button>
+ 
+             </div>
+             <div class='fourthvideo'>
+                  <button id='btn4' onClick='setvideo("videos/evelyn3.mp4")'>FAIL 4</button>
+             </div>
+             <div class='fifthvideo'>
+              <button id='btn5' onClick='setvideo("videos/evelyn3.mp4")'>FAIL 5</button>
+            </div>
+            
+          </div>
+ 
+ 
+         </div> 
+         <script type="text/javascript" src="functions/evelyn.js"></script>
+  </div>
+  <div id="images">
+    <table>
+      <tr>
+        <h2 style="padding-bottom:20px;">Δείτε τις εικόνες της ομάδας μας!</h2>
+      </tr>
+      <tr style="border:3px solid #3b6950">
+       <th id="creativerse" style="border-right:3px solid #3b6950">
+           <img src="pictures/creativerse.png" style="width:150px; height:100px; cursor:pointer;" onclick="showcvpics()">
+           <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">                     
+                <img id="modalpic" src="pictures/cv1.png" style="width:100%">
+              </div>
+              <a class="prev" onclick="prevpic()">&#10094;</a>
+              <a class="next" onclick="nextpic()">&#10095;</a>
+            </div>
+       </th>
+       <th id="wow" style="border-right:3px solid #3b6950">
+          <img src="pictures/WoWicon.png" style="width:100px; height:100px; cursor:pointer;" onclick="showwowpics()">
+          <div id="myModal1" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">                     
+                <img id="modalpic1" src="pictures/wow1.jpg" style="width:100%">
+              </div>
+              <a class="prev" onclick="prevpic1()">&#10094;</a>
+              <a class="next" onclick="nextpic1()">&#10095;</a>
+            </div>
+       </th>
+      <th id="minecraft">
+          <img src="pictures/minecraft.png" style="width:150px; height:100px; cursor:pointer;" onclick="showmcpics()">
+          <div id="myModal2" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">                     
+                <img id="modalpic2" src="pictures/mc1.png" style="width:100%">
+              </div>
+              <a class="prev" onclick="prevpic2()">&#10094;</a>
+              <a class="next" onclick="nextpic2()">&#10095;</a>
+            </div>
+      </th>
+    </tr>
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    </table>
+  </div>
+  <div id="contact">
+      <h2 style="padding-bottom:20px; text-align:center;">Επικοινωνήστε μαζί μας!</h2>
+      <div class="container">
+          <form action="action_page.php" method="GET">
+        
+            <label for="fname">Όνομα</label>
+            <input type="text" id="fname" name="firstname" placeholder="Το όνομα σας..">
+        
+            <label for="lname">Επώνυμο</label>
+            <input type="text" id="lname" name="lastname" placeholder="Το επίθετό σας.."> 
+
+            <label for="subject">Σχόλια</label>
+            <textarea id="subject" name="subject" placeholder="Πληκτρολογήστε ένα κείμενο.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Αποστολή">
+        
+          </form>
+        </div>
+  </div>
+<div id="about">
+    <h2 style="padding-bottom:20px;">Μάθετε περισσότερα!</h2>
+    <div id="info">
+      <p><i>"Είμαστε μια ομάδα ,με όνομα Φωτοσβέστες, και<br> 
+        μας αρέσουν πολύ τα ομαδικά διαδικτυακά παιχνιδια"</i></p>
+    </div>
+</div>
+  <div class="footer">
+      <p>Team creation date: Jan-2017</p>
+  </div>
+</body>
+</html>
